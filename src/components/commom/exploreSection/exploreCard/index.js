@@ -29,6 +29,35 @@ const ExploreCard = ({restaurant}) => {
         {goldOff && <div className='gold-off absolute-center'>{goldOff}</div>}
         {discount && <div className='discount absolute-center'>{discount}</div>}
       </div>
+      <div className='res-row'>
+        <div className='res-name'>{name}</div>
+        {rating && 
+          (<div className='res-rating absolute-center'>
+            {rating} <i className='fi fi-rr-star absolute-center'></i>
+          </div>
+        )}
+      </div>
+      <div className='res-row'>
+          {cuisines.length && (
+            <div className='res-cuisine'>
+              {cuisines.map((item, i) => {
+                return <span className='res-cuisine-tag'>{item}{i !== cuisines.length-1 && ","}</span>
+              })}
+              
+            </div>            
+          )}
+          {approxPrice && <div className='approx-price'>{approxPrice}</div>}
+      </div>
+      {bottomContainers && (
+      <div>
+        <div className='card-separator'></div>
+        <div className='explore-bottom'>
+          <img src={bottomContainers[0]?.image?.url} style={{height:"18px"}} alt={bottomContainers[0]?.text}/>
+          <div className='res-bottom-text'>{bottomContainers[0]?.text}</div>
+        </div> 
+      </div>
+      )
+      }
     </div>
   );
 }

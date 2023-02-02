@@ -7,7 +7,7 @@
 
 .explore-card-cover{
     height: 248px;
-    width: 320px;
+    width: 340px;
     border-radius: 15px;
     position: relative;
 }
@@ -79,4 +79,78 @@
     white-space: nowrap;
     line-height: 18px;
     font-weight: 500;
+}
+
+.res-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0px 6px;
+}
+
+.res-name {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--heading-text);
+}
+
+.res-rating {
+    background-color: var(--tag-green);
+    padding: 0px 8px;
+    height: 24px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-bg);
+    border-radius: 6px;
+}
+
+.res-rating i {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.res-cuisine {
+    max-width: 56%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.res-cuisine-tag {
+    margin-right: 4px;
+    color: var(--inactive-text);
+}
+
+.approx-price{
+    color: var(--inactive-text);
+    font-size: 16px;
+}
+
+.explore-bottom {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+.res-bottom-text {
+    margin-left: 6px;
+    font-size: 12px;
+    color: var(--inactive-text);
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-separator {
+    height: 1px;
+    margin: 10px 0px 6px;
+    background-color: var(--border-white);
+}
+
+.explore-card:hover{
+    border: 1px solid var(--border-white);
+    background-color: var(--primary-bg);
 }
