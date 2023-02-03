@@ -48,18 +48,22 @@ const ExploreCard = ({restaurant}) => {
           )}
           {approxPrice && <div className='approx-price'>{approxPrice}</div>}
       </div>
-      {bottomContainers && (
-      <div>
-        <div className='card-separator'></div>
-        <div className='explore-bottom'>
-          <img src={bottomContainers[0]?.image?.url} style={{height:"18px"}} alt={bottomContainers[0]?.text}/>
-          <div className='res-bottom-text'>{bottomContainers[0]?.text}</div>
-        </div> 
-      </div>
-      )
-      }
+      {bottomContainers.length > 0 && (
+        <div>
+          <div className="card-separator"></div>
+          <div className="explore-bottom">
+            <img
+              src={bottomContainers[0]?.image?.url}
+              alt={bottomContainers[0]?.text}
+              style={{ height: "18px" }}
+            />
+            <div className="res-bottom-text">{bottomContainers[0]?.text}</div>
+          </div>
+        </div>
+      )}
     </div>
   );
-}
+};
+
 
 export default ExploreCard
