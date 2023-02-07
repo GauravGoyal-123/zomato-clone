@@ -5,9 +5,6 @@ import TabOptions from '../../components/commom/tabOptions'
 import Delivery from '../../components/Delivery/delivery';
 import DinningOut from '../../components/DinningOut';
 import NightLife from '../../components/NightLife';
-
-
-
 function HomePage() {
 
   const [activeTab, setActiveTab] = useState("Delivery");
